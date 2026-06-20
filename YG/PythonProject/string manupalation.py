@@ -1,0 +1,10 @@
+s = "y1"
+print(s.replace("o","@"))
+print(s.strip("1"))
+print(s.upper())
+print(s.lower())
+print(s.isalpha())
+print(s.isalnum())
+print(s.isdigit())
+print(s.lstrip())
+print(s.__gt__("1"))

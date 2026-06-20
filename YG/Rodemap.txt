@@ -1,0 +1,21 @@
+1) BASIC PYTHON
+2) FRONTEND [HTML , CSS JAVASCRIPT , BOOTSTRAP]
+3) BACKEND [ADV PYTHON {API , DJANGO, INTEGRATE}]
+4) DATABASE []
+_______________________________________________
+HTML:
+INTODUCTION
+BODY STRCUTURE
+HEADING & PARAGRAPH
+TAGS [<I> , <IMG> ,  <A HREF>  ETC]
+TABLE: <TH> , <TD> , 
+
+Academic Information
+10th Percentage/CGPA
+12th Percentage/CGPA
+Board Name
+Passing Year
+
+Course Details
+Course Selection (B.Tech, BCA, BBA, etc.)
+Department/Branch
