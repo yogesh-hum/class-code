@@ -1,0 +1,25 @@
+Step 1: Sign Up for Vercel
+
+Go to:
+
+Vercel
+
+Sign in using your GitHub account (recommended).
+
+Step 2: Import Your GitHub Repository
+Click Add New → Project.
+Authorize Vercel to access your GitHub account if prompted.
+Select your repository.
+Click Import.
+
+Step 3: Deploy
+
+Click Deploy.
+
+Vercel will:
+
+Install dependencies
+Build your project
+Deploy ithttps://class-code-gkdbef8wg-naikyogesh580-gmailcoms-projects.vercel.app/
+Provide a live URL such as:
+https://class-code-gkdbef8wg-naikyogesh580-gmailcoms-projects.vercel.app/
