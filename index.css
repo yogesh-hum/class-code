@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Nav {
+  height: 50px;
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+}
+
+ol {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 20px;
+  cursor: pointer;
+  gap: 20%;
+  padding: 8px 12px;
+  transition: 0.3s;
+
+}
+
+li:hover {
+  background: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.imgbox {
+    float: left;
+    text-align: center;
+    width: 300px;
+    border: 2px solid gray;
+    margin: 80px;
+    padding: 25px;
+
+  }
+  img{
+    height: 300px;
+    width: 270px;
+  }
