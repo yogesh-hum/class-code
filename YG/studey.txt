@@ -1,0 +1,19 @@
+HTML
+CSS
+Javascript
+
+
+1) Variables -> var , let , const
+const ka matlab hai ki variable ki value baad mein change nahi kar sakte.
+var a = 10
+a =5
+let a =5
+let a = 10
+2) datatypes
+3) conditional [if else]
+4) loops
+5) functions
+6) arrays 
+
+
+ practice questions de code kar ke mujhe Javascript
