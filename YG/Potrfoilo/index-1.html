@@ -126,6 +126,56 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
     .reveal.visible{opacity:1;transform:translateY(0)}
     @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Developer-workstation direction inspired by the supplied reference video */
+    .hero .shell{width:min(1280px,calc(100% - 64px))}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(420px,1.12fr);gap:clamp(34px,5vw,76px);align-items:center}
+    .hero-content{max-width:620px}
+    .hero:after{width:min(40vw,520px);right:-10%;top:8%;opacity:.55}
+    .workspace{position:relative;z-index:2;min-width:0;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(18,18,18,.98),rgba(7,7,7,.98));box-shadow:0 28px 90px rgba(0,0,0,.48);padding:16px;transform:perspective(1200px) rotateY(-5deg) rotateX(1deg)}
+    .workspace:before{content:"";position:absolute;inset:-1px;pointer-events:none;border:1px solid rgba(240,68,56,.16);transform:translate(7px,7px);z-index:-1}
+    .ws-top{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:0 0 13px}
+    .ws-brand{font: .68rem var(--mono);letter-spacing:.08em;color:#ddd}
+    .ws-dots{display:flex;gap:5px}.ws-dots i{width:6px;height:6px;border-radius:50%;background:#444}.ws-dots i:first-child{background:var(--red)}
+    .ws-state{font: .58rem var(--mono);color:#777}
+    .ws-grid{display:grid;grid-template-columns:112px minmax(0,1fr);gap:13px;padding-top:14px}
+    .ws-rail{display:flex;flex-direction:column;gap:8px}
+    .ws-rail-card{border:1px solid var(--line);background:#101010;padding:9px;min-height:66px}
+    .ws-rail-card.active{border-color:rgba(240,68,56,.55);background:rgba(240,68,56,.07)}
+    .ws-rail-card b{display:block;font: .58rem var(--mono);color:#eee;margin-bottom:5px}
+    .ws-rail-card span{display:block;font: .5rem var(--mono);color:#777}
+    .ws-main{min-width:0}
+    .ws-code{border:1px solid var(--line);background:#080808;padding:14px;min-height:208px;position:relative;overflow:hidden}
+    .ws-file{display:flex;justify-content:space-between;gap:8px;font: .56rem var(--mono);color:#777;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:9px;margin-bottom:10px}
+    .code-lines{font:clamp(.54rem,.8vw,.68rem)/1.9 var(--mono);color:#858585;white-space:pre;overflow:hidden}
+    .code-lines .ln{color:#444;display:inline-block;width:22px}
+    .code-lines .kw{color:#d88a80}.code-lines .fn{color:#d7d7d7}.code-lines .str{color:#9aaf9b}
+    .ws-lower{display:grid;grid-template-columns:1.15fr .85fr;gap:9px;margin-top:9px}
+    .ws-panel{border:1px solid var(--line);background:#101010;padding:11px;min-width:0}
+    .ws-panel-title{font: .55rem var(--mono);color:#777;letter-spacing:.08em;text-transform:uppercase}
+    .ws-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+    .ws-stats b{display:block;font-size:.9rem;line-height:1.2;color:#eee}.ws-stats span{display:block;font: .48rem var(--mono);color:#777;margin-top:4px}
+    .ws-graph{height:65px;margin-top:8px;width:100%}
+    .ws-bottom{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);margin-top:12px;padding-top:10px;font: .52rem var(--mono);color:#666}
+    .ws-bottom strong{color:#a8c6a9;font-weight:400}
+    .section-terminal{border:1px solid var(--line);background:#0d0d0d;padding:18px;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .terminal-chip{border:1px solid rgba(255,255,255,.08);padding:14px;background:#111;min-width:0}
+    .terminal-chip small{font: .58rem var(--mono);color:var(--red2);letter-spacing:.1em}
+    .terminal-chip b{display:block;font-size:.95rem;margin-top:8px}
+    .terminal-chip p{font-size:.72rem;color:#888;margin-top:3px}
+    @media(max-width:1000px){.hero-layout{grid-template-columns:1fr;gap:38px}.hero-content{max-width:760px}.workspace{max-width:760px;transform:none}.hero{padding-top:145px;padding-bottom:110px}.hero:after{right:-18%;top:4%}}
+    @media(max-width:650px){
+      .hero .shell{width:min(100% - 36px,560px)}.hero{min-height:auto;padding:118px 0 76px}.hero-layout{gap:34px}
+      .hero-content{max-width:none}.hero:after{width:90vw;right:-50%;top:14%;opacity:.4}
+      .workspace{padding:11px;transform:none}.ws-grid{grid-template-columns:76px minmax(0,1fr);gap:8px}.ws-rail-card{padding:7px;min-height:58px}.ws-rail-card b{font-size:.5rem}.ws-rail-card span{font-size:.45rem}
+      .ws-code{padding:9px;min-height:184px}.code-lines{font-size:.48rem;line-height:1.85}.ws-lower{grid-template-columns:1fr}.ws-panel:last-child{display:none}
+      .ws-stats{margin-top:8px}.ws-stats b{font-size:.8rem}.ws-bottom{font-size:.46rem}
+      .availability{font-size:.61rem;margin-bottom:22px}.hero-kicker{font-size:.67rem;letter-spacing:.14em}
+      .hero-meta{margin-top:32px;gap:12px}.menu-btn{display:block;min-width:42px;min-height:38px;font-size:1.05rem;line-height:1}
+      .section-terminal{grid-template-columns:1fr}
+    }
+    @media(prefers-reduced-motion:reduce){.workspace{transform:none}}
+
     @media(max-width:850px){.nav-links{gap:17px}.about-grid{gap:35px}.skills-grid{grid-template-columns:repeat(3,1fr)}.hero:after{right:-28%;opacity:.7}}
     @media(max-width:650px){
       .shell{width:min(100% - 36px,560px)}.section{padding:82px 0}.nav{padding:12px 0}.menu-btn{display:block}.nav-cta{display:none}
@@ -152,7 +202,7 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="shell">
+      <div class="shell hero-layout">
         <div class="hero-content">
           <div class="availability"><span class="pulse"></span> OPEN TO ENTRY-LEVEL OPPORTUNITIES</div>
           <p class="hero-kicker">BCA STUDENT · ASPIRING SOFTWARE DEVELOPER</p>
@@ -164,6 +214,28 @@
           </div>
           <div class="hero-meta"><span>Based in Mumbai, India</span><span>Web · Python · SQL</span><span>Learning by building</span></div>
         </div>
+        <aside class="workspace" aria-label="Developer workspace preview">
+          <div class="ws-top"><div class="ws-dots"><i></i><i></i><i></i></div><span class="ws-brand">YN / DEV WORKSPACE</span><span class="ws-state">LOCAL SESSION</span></div>
+          <div class="ws-grid">
+            <div class="ws-rail">
+              <div class="ws-rail-card active"><b>01 / PROFILE</b><span>yogesh.dev</span></div>
+              <div class="ws-rail-card"><b>02 / WORK</b><span>selected builds</span></div>
+              <div class="ws-rail-card"><b>03 / STACK</b><span>tools & skills</span></div>
+              <div class="ws-rail-card"><b>04 / LINKS</b><span>github · mail</span></div>
+            </div>
+            <div class="ws-main">
+              <div class="ws-code">
+                <div class="ws-file"><span>~/portfolio/about.ts</span><span>UTF-8</span></div>
+                <div class="code-lines"><span class="ln">01</span><span class="kw">const</span> developer = {<br><span class="ln">02</span>  name: <span class="str">"Yogesh Naik"</span>,<br><span class="ln">03</span>  role: <span class="str">"Aspiring Developer"</span>,<br><span class="ln">04</span>  base: <span class="str">"Mumbai, India"</span>,<br><span class="ln">05</span>  focus: [<span class="str">"Python"</span>, <span class="str">"Web"</span>, <span class="str">"SQL"</span>],<br><span class="ln">06</span>  mindset: <span class="str">"learn · build · improve"</span><br><span class="ln">07</span>};<br><br><span class="ln">08</span><span class="kw">function</span> <span class="fn">build</span>() {<br><span class="ln">09</span>  return <span class="str">"useful things"</span>;<br><span class="ln">10</span>}</div>
+              </div>
+              <div class="ws-lower">
+                <div class="ws-panel"><div class="ws-panel-title">Current build / focus</div><div class="ws-stats"><div><b>04</b><span>PROJECTS</span></div><div><b>08</b><span>CORE TOOLS</span></div><div><b>01</b><span>GOAL</span></div></div><svg class="ws-graph" viewBox="0 0 300 65" preserveAspectRatio="none" aria-label="Decorative learning progress line"><path d="M0 53 L35 48 L68 50 L98 31 L130 38 L162 22 L196 30 L230 13 L263 19 L300 5" fill="none" stroke="#f04438" stroke-width="1.5"/><path d="M0 53 L35 48 L68 50 L98 31 L130 38 L162 22 L196 30 L230 13 L263 19 L300 5 L300 65 L0 65Z" fill="rgba(240,68,56,.08)"/></svg></div>
+                <div class="ws-panel"><div class="ws-panel-title">Environment</div><div class="ws-stats" style="grid-template-columns:1fr"><div><b>Python</b><span>LEARNING / BUILDING</span></div><div><b>HTML · CSS · JS</b><span>WEB INTERFACES</span></div><div><b>SQL</b><span>DATA BASICS</span></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="ws-bottom"><span>STATUS <strong>● BUILDING</strong></span><span>NO FAKE METRICS · JUST PROGRESS</span></div>
+        </aside>
       </div>
       <div class="scroll-mark">SCROLL TO EXPLORE</div>
     </section>
